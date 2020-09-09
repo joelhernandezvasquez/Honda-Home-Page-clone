@@ -45,6 +45,20 @@ img {
   letter-spacing: 2px;
 }
 
+.triangle {
+  /* border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: calc(2 * 45px * 0.866) solid green;
+	border-top: 0px solid transparent;
+	display: inline-block;
+    //transform: rotate(180deg); */
+  width: 0;
+  height: 0;
+  border-right: 40px solid transparent;
+  border-bottom: 60px solid black;
+  border-left: 40px solid transparent;
+}
+
 header .main-nav {
   position: fixed;
   z-index: 5;
@@ -154,7 +168,8 @@ header .main-nav .menu div:nth-child(3) a {
           justify-content: flex-end;
 }
 
-.banner .overlay h1, .banner .overlay p {
+.banner .overlay h1,
+.banner .overlay p {
   color: #fefffb;
   letter-spacing: 2px;
   line-height: 1.4;
@@ -187,6 +202,8 @@ header .main-nav .menu div:nth-child(3) a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .airbag-alert .airbag-warning-container div {
@@ -235,7 +252,8 @@ header .main-nav .menu div:nth-child(3) a {
   margin: 0 1rem;
 }
 
-.airbag-alert .airbag-info a, .airbag-alert .airbag-info i {
+.airbag-alert .airbag-info a,
+.airbag-alert .airbag-info i {
   color: #ff9600;
   font-size: 1rem;
   font-weight: bold;
