@@ -1,0 +1,243 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 1100px;
+  margin: auto;
+}
+
+.mfont {
+  font-size: 1.2rem;
+}
+
+.lfont {
+  font-size: 2.5rem;
+}
+
+.btn-call_action {
+  background: #f43c3f;
+  color: #fefffb;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+header .main-nav {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  background: #fefffb;
+}
+
+header .main-nav .menu {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #dadce0;
+  padding: 0.5rem 2rem;
+}
+
+header .main-nav .menu .items {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .main-nav .menu .items i {
+  font-size: 1.7rem;
+}
+
+header .main-nav .menu li:first-child span {
+  font-size: 0.8rem;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+header .main-nav .menu div:nth-child(2) {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .main-nav .menu div:nth-child(2) img {
+  padding-top: 10px;
+}
+
+header .main-nav .menu div:nth-child(3) {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .main-nav .menu div:nth-child(3) a {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.banner {
+  height: 70vh;
+  background: url("../images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.banner .overlay h1, .banner .overlay p {
+  color: #fefffb;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.banner .overlay a {
+  margin: 1rem 0 8rem 0;
+}
+
+.airbag-alert {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.airbag-alert .airbag-warning-container {
+  background: #ff9600;
+  width: 20%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.airbag-alert .airbag-warning-container div {
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+}
+
+.airbag-alert .airbag-warning-container div i {
+  color: #ff9600;
+  font-size: 1rem;
+}
+
+.airbag-alert .airbag-warning-container span {
+  color: #fefffb;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.airbag-alert .airbag-info {
+  width: 80%;
+  height: 80px;
+  border: 1px solid silver;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.airbag-alert .airbag-info p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 1rem;
+}
+
+.airbag-alert .airbag-info a, .airbag-alert .airbag-info i {
+  color: #ff9600;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

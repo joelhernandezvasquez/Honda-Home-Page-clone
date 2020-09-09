@@ -1,0 +1,220 @@
+@import "variables";
+
+*
+{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: $main-font;
+   
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+    color:$main-color;
+}
+
+
+
+img{
+    width:100%;
+}
+
+.container{
+    width:1100px;
+    margin:auto;
+}
+
+.mfont{
+    font-size: 1.2rem;
+}
+
+.lfont{
+    font-size: 2.5rem;
+}
+
+.btn-call_action
+{
+    background:$action-btn;
+    color:$primary-color;
+    border:none;
+    padding:0.8rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+
+
+
+header{
+    .main-nav{
+       position: fixed;
+       z-index: 5;
+       width:100%;
+       background:$primary-color;
+
+      .menu{
+        height: 60px;
+         display: flex;
+          align-items: center;
+          justify-content:space-between;
+          border:1px solid $main-menu-border;
+          padding:0.5rem 2rem;
+          
+         
+          .items
+          {
+            cursor: pointer;
+            display:flex;
+            align-items: center;
+
+            i
+            {
+                font-size: 1.7rem;
+            }
+
+           
+          }
+      }
+      .menu li:first-child span{
+         font-size: 0.8rem;
+         margin-left:10px;
+         font-weight: 700;
+      }
+      .menu div:nth-child(2)
+      {
+         position: relative; 
+         display:flex;
+         flex-direction: column;
+         align-items:center;
+         img{
+             padding-top:10px;
+         }
+
+        
+        
+      }
+      .menu div:nth-child(3)
+      {
+          width:150px;
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+
+          a{
+            font-size:0.9rem;
+            font-weight: bold;
+        }
+      }
+     
+     
+}
+}
+
+.banner{
+   height: 70vh;
+   background:url('../images/banner.jpg');
+   background-position: center;
+   background-size: cover;
+   position:relative;
+
+   .overlay{
+       width: 100%;
+       height:100%;
+       background:rgba(0,0,0,0.2);
+       position:absolute;
+       top:0;
+       left:0;
+       z-index:2;
+       display:flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content:flex-end;
+
+       
+       h1,p{
+           color:$primary-color;
+           letter-spacing: 2px;
+           line-height: 1.4;
+       }
+       a{
+           margin:1rem 0 8rem 0;
+       }
+   }
+}
+
+.airbag-alert
+{
+    border:1px solid red;
+    display:flex;
+    align-items: center;
+
+       .airbag-warning-container
+       {
+         background:$airbag-section-bg;
+          width:20%;
+          height:80px;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+
+          div{
+             background:white;
+             width: 25px;
+             height:25px;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-right: 10px;
+
+             i{
+                 color:$airbag-section-bg;
+                 font-size: 1rem;
+             }
+
+             
+             
+          }
+
+          span
+          {
+           color:$primary-color;
+           font-size: $sm-font;
+           font-weight: bold;
+          }
+
+          
+        
+       }
+
+       .airbag-info
+       {
+          width:80%;
+          height:80px;
+          border:1px solid silver;
+          display:flex;
+          align-items: center;
+
+          p{
+              font-size: $sm-font;
+              font-weight: 500;
+              margin:0 1rem;
+          }
+          a,i{
+              color:$airbag-section-bg;
+              font-size: $sm-font;
+              font-weight: bold;
+          }
+    
+       }
+
+}
