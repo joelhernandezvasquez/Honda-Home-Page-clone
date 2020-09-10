@@ -46,17 +46,16 @@ img {
 }
 
 .triangle {
-  /* border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-	border-bottom: calc(2 * 45px * 0.866) solid green;
-	border-top: 0px solid transparent;
-	display: inline-block;
-    //transform: rotate(180deg); */
   width: 0;
   height: 0;
   border-right: 40px solid transparent;
-  border-bottom: 60px solid black;
+  border-bottom: 80px solid #ff9600;
   border-left: 40px solid transparent;
+}
+
+.box {
+  width: 200px;
+  height: 250px;
 }
 
 header .main-nav {
@@ -180,7 +179,6 @@ header .main-nav .menu div:nth-child(3) a {
 }
 
 .airbag-alert {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +189,7 @@ header .main-nav .menu div:nth-child(3) a {
 
 .airbag-alert .airbag-warning-container {
   background: #ff9600;
-  width: 20%;
+  width: 15%;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,11 +200,10 @@ header .main-nav .menu div:nth-child(3) a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
   position: relative;
 }
 
-.airbag-alert .airbag-warning-container div {
+.airbag-alert .airbag-warning-container .icon-container {
   background: white;
   width: 25px;
   height: 25px;
@@ -223,7 +220,7 @@ header .main-nav .menu div:nth-child(3) a {
   margin-right: 10px;
 }
 
-.airbag-alert .airbag-warning-container div i {
+.airbag-alert .airbag-warning-container .icon-container i {
   color: #ff9600;
   font-size: 1rem;
 }
@@ -234,10 +231,17 @@ header .main-nav .menu div:nth-child(3) a {
   font-weight: bold;
 }
 
+.airbag-alert .airbag-warning-container div:last-child {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .airbag-alert .airbag-info {
-  width: 80%;
+  width: 85%;
   height: 80px;
-  border: 1px solid silver;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,7 +253,7 @@ header .main-nav .menu div:nth-child(3) a {
 .airbag-alert .airbag-info p {
   font-size: 1rem;
   font-weight: 500;
-  margin: 0 1rem;
+  margin: 0 1rem 0 5rem;
 }
 
 .airbag-alert .airbag-info a,
@@ -257,5 +261,28 @@ header .main-nav .menu div:nth-child(3) a {
   color: #ff9600;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.gallery .inner-gallery {
+  display: -ms-grid;
+  display: grid;
+}
+
+.gallery .inner-gallery div:nth-child(2) {
+  background: url("../images/my20-accord-exterior-overview-1140-2x.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery .inner-gallery div:nth-child(4) {
+  background: url("../images/street-gold-wing-tile-750x750.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery .inner-gallery div:nth-child(6) {
+  background: url("../images/NSX-Indy-Yellow-Pearl-front-view-driving-large2x.jpg");
+  background-position: center;
+  background-size: cover;
 }
 /*# sourceMappingURL=main.css.map */

@@ -47,19 +47,24 @@ img {
 }
 
 .triangle {
-	/* border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-	border-bottom: calc(2 * 45px * 0.866) solid green;
-	border-top: 0px solid transparent;
-	display: inline-block;
-    //transform: rotate(180deg); */
 	width: 0;
 	height: 0;
-
-	border-right: 40px solid transparent;
-	border-bottom: 60px solid black;
-	border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+	border-bottom: 80px solid $airbag-section-bg;
+	border-left: 40px solid transparent;	
 }
+
+.box{
+	width:200px;
+	height:250px;
+}
+
+.honda-gallery-box
+{
+	
+}
+
+
 
 header {
 	.main-nav {
@@ -147,21 +152,21 @@ header {
 }
 
 .airbag-alert {
-	border: 1px solid red;
+	//border: 1px solid red;
 	display: flex;
 	align-items: center;
 
 	.airbag-warning-container {
 		background: $airbag-section-bg;
-		width: 20%;
+		width: 15%;
 		height: 80px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		overflow: hidden;
 		position: relative;
+		
 
-		div {
+		.icon-container {
 			background: white;
 			width: 25px;
 			height: 25px;
@@ -184,17 +189,26 @@ header {
 		}
 	}
 
+	 .airbag-warning-container div:last-child
+	 {
+		position:absolute;
+		right:-40px;
+		top:0;
+		transform:rotate(180deg);
+		
+	 }
+
 	.airbag-info {
-		width: 80%;
+		width: 85%;
 		height: 80px;
-		border: 1px solid silver;
 		display: flex;
 		align-items: center;
+		
 
 		p {
 			font-size: $sm-font;
 			font-weight: 500;
-			margin: 0 1rem;
+			margin:0 1rem 0 5rem;
 		}
 		a,
 		i {
@@ -202,5 +216,34 @@ header {
 			font-size: $sm-font;
 			font-weight: bold;
 		}
+	}
+}
+
+.gallery
+{
+	.inner-gallery
+	{
+		display:grid;
+
+
+	}
+
+	.inner-gallery div:nth-child(2)
+	{
+		background:url("../images/my20-accord-exterior-overview-1140-2x.webp");
+		background-position: center;
+		background-size: cover;
+	}
+	.inner-gallery div:nth-child(4)
+	{
+		background:url("../images/street-gold-wing-tile-750x750.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	.inner-gallery div:nth-child(6)
+	{
+		background:url("../images/NSX-Indy-Yellow-Pearl-front-view-driving-large2x.jpg");
+		background-position: center;
+		background-size: cover;
 	}
 }
