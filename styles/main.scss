@@ -21,6 +21,8 @@ a {
 
 img {
 	width: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .container {
@@ -34,6 +36,10 @@ img {
 
 .lfont {
 	font-size: 2.5rem;
+}
+
+.box {
+	cursor: pointer;
 }
 
 .btn-call_action {
@@ -54,50 +60,44 @@ img {
 	border-left: 40px solid transparent;
 }
 
-.small-triangle{
+.small-triangle {
 	width: 0;
 	height: 0;
 	border-right: 15px solid transparent;
 	border-bottom: 15px solid #2783cb;
 	border-left: 15px solid transparent;
 	position: absolute;
-	right:-20px;
-	transform:rotate(90deg);
-	
-}
-
-.box {
+	right: -20px;
+	transform: rotate(90deg);
+	z-index: 3;
 }
 
 .honda-gallery-box {
-
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding:1.5rem;
+	padding: 1.5rem;
 	cursor: pointer;
-	position:relative;
+	position: relative;
 
-	*{
-		margin:0.7rem 0;
-	 }
-	img{
-		width:180px;
+	* {
+		margin: 0.7rem 0;
+	}
+	img {
+		width: 180px;
 	}
 
-	p{
+	p {
 		font-size: 0.9rem;
-		color:$primary-color;
+		color: $primary-color;
 	}
 
-	h2{
-		color:$primary-color;
+	h2 {
+		color: $primary-color;
 		font-size: 1rem;
-		border-bottom:2px solid $primary-color;
+		border-bottom: 2px solid $primary-color;
 	}
-
-	
 }
 
 header {
@@ -253,13 +253,13 @@ header {
 	.inner-gallery {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
+		overflow: hidden;
 	}
 
 	.inner-gallery div:first-child {
 		background: #2783cb;
 		grid-column: 1/2;
 		grid-row: 1/2;
-
 	}
 	.inner-gallery div:nth-child(2) {
 		grid-column: 2/4;
@@ -267,20 +267,20 @@ header {
 		background: url("../images/my20-accord-exterior-overview-1140-2x.webp");
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.inner-gallery div:nth-child(3) {
 		grid-column: 4/5;
 		grid-row: 1/2;
-		background:$dark-red-bg;
+		background: $dark-red-bg;
 
-		p{
+		p {
 			text-align: center;
 			line-height: 1.4;
 		}
-		.small-triangle
-		{
-			border-bottom-color:$dark-red-bg;
+		.small-triangle {
+			border-bottom-color: $dark-red-bg;
 		}
 	}
 
@@ -290,23 +290,25 @@ header {
 		background: url("../images/street-gold-wing-tile-750x750.jpg");
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.inner-gallery div:nth-child(5) {
 		grid-column: 1/2;
 		grid-row: 2/3;
-		background:$dark-grey;
+		background: $dark-grey;
 
-		p,h2{
-			color:$main-color;
+		p,
+		h2 {
+			color: $main-color;
 			text-align: center;
 		}
-		p{
+		p {
 			line-height: 1.4;
 		}
 
-		h2{
-			border-bottom-color:$main-color;
+		h2 {
+			border-bottom-color: $main-color;
 		}
 	}
 
@@ -316,18 +318,18 @@ header {
 		background: url("../images/NSX-Indy-Yellow-Pearl-front-view-driving-large2x.jpg");
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 	}
+
 	.inner-gallery div:nth-child(7) {
 		grid-column: 6/7;
 		grid-row: 2/3;
-		background:$main-color;
+		background: $main-color;
 
-		.small-triangle
-		{
-			
+		.small-triangle {
 			border-bottom-color: $main-color;
-			left:-20px;
-			transform:rotate(270deg);	
+			left: -20px;
+			transform: rotate(270deg);
 		}
 	}
 
@@ -339,19 +341,16 @@ header {
 		background-position: center;
 	}
 
-	.inner-gallery div:nth-child(9) 
-	{
+	.inner-gallery div:nth-child(9) {
 		grid-column: 2/3;
 		grid-row: 3/4;
-        background:$dark-red-bg;
-		p{
+		background: $dark-red-bg;
+		p {
 			text-align: center;
 		}
-		.small-triangle
-		{
-			border-bottom-color:$dark-red-bg;
+		.small-triangle {
+			border-bottom-color: $dark-red-bg;
 		}
-		
 	}
 
 	.inner-gallery div:nth-child(10) {
@@ -373,14 +372,13 @@ header {
 	.inner-gallery div:nth-child(12) {
 		grid-column: 1/2;
 		grid-row: 4/5;
-		background:$dark-red-bg;
+		background: $dark-red-bg;
 
-		p{
+		p {
 			text-align: center;
 		}
-		.small-triangle
-		{
-			border-bottom-color:$dark-red-bg;
+		.small-triangle {
+			border-bottom-color: $dark-red-bg;
 		}
 	}
 	.inner-gallery div:nth-child(13) {
@@ -396,32 +394,37 @@ header {
 		background: url("../images/banner-home-bf4-med.jpg");
 		background-size: cover;
 		background-position: center;
-
-		
 	}
 	.inner-gallery div:nth-child(15) {
 		grid-column: 5/6;
 		grid-row: 4/5;
 
-		background:$dark-grey;
-		p,h2{
-			color:$main-color;
+		background: $dark-grey;
+		p,
+		h2 {
+			color: $main-color;
 			text-align: center;
 		}
-		h2{
-			border-bottom-color:$main-color;
+		h2 {
+			border-bottom-color: $main-color;
 		}
-		.small-triangle
-		{
-			
+		.small-triangle {
 			border-bottom-color: $dark-grey;
-			left:-20px;
-			transform:rotate(270deg);	
+			left: -20px;
+			transform: rotate(270deg);
 		}
 	}
 	.inner-gallery div:nth-child(16) {
 		grid-column: 6/7;
 		grid-row: 4/5;
-		background:$dark-red-bg;
+		background: $dark-red-bg;
+
+		.small-triangle {
+			border-bottom-color: $dark-red-bg;
+			top: -25px;
+			left: 40%;
+			transform: rotate(0deg);
+			transform: translate(50%, 0%);
+		}
 	}
 }

@@ -20,6 +20,10 @@ a {
 
 img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .container {
@@ -33,6 +37,10 @@ img {
 
 .lfont {
   font-size: 2.5rem;
+}
+
+.box {
+  cursor: pointer;
 }
 
 .btn-call_action {
@@ -63,6 +71,7 @@ img {
   right: -20px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  z-index: 3;
 }
 
 .honda-gallery-box {
@@ -313,6 +322,7 @@ header .main-nav .menu div:nth-child(3) a {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
+  overflow: hidden;
 }
 
 .gallery .inner-gallery div:first-child {
@@ -335,6 +345,7 @@ header .main-nav .menu div:nth-child(3) a {
   background: url("../images/my20-accord-exterior-overview-1140-2x.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery .inner-gallery div:nth-child(3) {
@@ -366,6 +377,7 @@ header .main-nav .menu div:nth-child(3) a {
   background: url("../images/street-gold-wing-tile-750x750.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery .inner-gallery div:nth-child(5) {
@@ -378,7 +390,8 @@ header .main-nav .menu div:nth-child(3) a {
   background: #eeeeee;
 }
 
-.gallery .inner-gallery div:nth-child(5) p, .gallery .inner-gallery div:nth-child(5) h2 {
+.gallery .inner-gallery div:nth-child(5) p,
+.gallery .inner-gallery div:nth-child(5) h2 {
   color: black;
   text-align: center;
 }
@@ -401,6 +414,7 @@ header .main-nav .menu div:nth-child(3) a {
   background: url("../images/NSX-Indy-Yellow-Pearl-front-view-driving-large2x.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery .inner-gallery div:nth-child(7) {
@@ -526,7 +540,8 @@ header .main-nav .menu div:nth-child(3) a {
   background: #eeeeee;
 }
 
-.gallery .inner-gallery div:nth-child(15) p, .gallery .inner-gallery div:nth-child(15) h2 {
+.gallery .inner-gallery div:nth-child(15) p,
+.gallery .inner-gallery div:nth-child(15) h2 {
   color: black;
   text-align: center;
 }
@@ -550,5 +565,15 @@ header .main-nav .menu div:nth-child(3) a {
   -ms-grid-row-span: 1;
   grid-row: 4/5;
   background: #cc0001;
+}
+
+.gallery .inner-gallery div:nth-child(16) .small-triangle {
+  border-bottom-color: #cc0001;
+  top: -25px;
+  left: 40%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transform: translate(50%, 0%);
+          transform: translate(50%, 0%);
 }
 /*# sourceMappingURL=main.css.map */
