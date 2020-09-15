@@ -27,8 +27,9 @@ img {
 }
 
 .container {
-  width: 1100px;
+  max-width: 1100px;
   margin: auto;
+  padding: 1rem;
 }
 
 .mfont {
@@ -114,26 +115,26 @@ img {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.inner-videos-gallery-title {
+.content .inner-videos-gallery-title {
   color: #fefffb;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-.inner-videos-gallery-text {
+.content .inner-videos-gallery-text {
   color: #fefffb;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
   line-height: 1.4;
 }
 
 .inner-videos-gallery-link {
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .inner-videos-gallery-body-text {
@@ -192,7 +193,7 @@ img {
 
 header .main-nav {
   position: fixed;
-  z-index: 5;
+  z-index: 100;
   width: 100%;
   background: #fefffb;
 }
@@ -766,13 +767,6 @@ header .main-nav .menu div:nth-child(3) a {
   z-index: 50;
 }
 
-.videos-gallery .inner-videos-gallery .mobility .content {
-  /* background: url("../images/mobility.jpg");
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat; */
-}
-
 .videos-gallery .inner-videos-gallery .mobility .content a {
   color: #fefffb;
   padding-top: 0.5rem;
@@ -780,9 +774,6 @@ header .main-nav .menu div:nth-child(3) a {
 
 .videos-gallery .inner-videos-gallery .enviroment {
   position: relative;
-}
-
-.videos-gallery .inner-videos-gallery .enviroment .content {
   background: url("../images/enviroment.jpg");
   background-position: center;
   background-size: cover;
@@ -796,9 +787,6 @@ header .main-nav .menu div:nth-child(3) a {
 
 .videos-gallery .inner-videos-gallery .community {
   position: relative;
-}
-
-.videos-gallery .inner-videos-gallery .community .content {
   background: url("../images/comunity2.jpg");
   background-position: center;
   background-size: cover;
@@ -812,9 +800,6 @@ header .main-nav .menu div:nth-child(3) a {
 
 .videos-gallery .inner-videos-gallery .safety {
   position: relative;
-}
-
-.videos-gallery .inner-videos-gallery .safety .content {
   background: url("../images/safety.jpg");
   background-position: center;
   background-size: cover;
@@ -824,5 +809,58 @@ header .main-nav .menu div:nth-child(3) a {
 .videos-gallery .inner-videos-gallery .safety .content a {
   color: #fefffb;
   padding-top: 0.5rem;
+}
+
+.honda-history {
+  height: 100vh;
+  background: url("../images/homepage-p1-philosophy-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.honda-history .inner-honda-history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+.honda-history .inner-honda-history h1 {
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.honda-history .inner-honda-history p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+}
+
+.honda-history .inner-honda-history a {
+  font-weight: bold;
+}
+
+.honda-history .inner-honda-history > * {
+  margin: 0.5rem 0;
 }
 /*# sourceMappingURL=main.css.map */
