@@ -1,0 +1,41 @@
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid red;
+  margin-top: 3rem;
+}
+
+.mfont {
+  font-size: 1.2rem;
+}
+
+.lfont {
+  font-size: 2.5rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid #ff9600;
+  border-left: 40px solid transparent;
+}
+
+.small-triangle {
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #2783cb;
+  border-left: 15px solid transparent;
+  position: absolute;
+  right: -20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 3;
+}
+
+.letter-space {
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=utility.css.map */

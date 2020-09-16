@@ -1,4 +1,5 @@
 @import "variables";
+@import "utility";
 
 * {
 	box-sizing: border-box;
@@ -25,19 +26,6 @@ img {
 	object-position: center;
 }
 
-.container {
-	max-width: 1100px;
-	margin: auto;
-	padding: 1rem;
-}
-
-.mfont {
-	font-size: 1.2rem;
-}
-
-.lfont {
-	font-size: 2.5rem;
-}
 
 .box {
 	cursor: pointer;
@@ -53,25 +41,7 @@ img {
 	letter-spacing: 2px;
 }
 
-.triangle {
-	width: 0;
-	height: 0;
-	border-right: 40px solid transparent;
-	border-bottom: 80px solid $airbag-section-bg;
-	border-left: 40px solid transparent;
-}
 
-.small-triangle {
-	width: 0;
-	height: 0;
-	border-right: 15px solid transparent;
-	border-bottom: 15px solid #2783cb;
-	border-left: 15px solid transparent;
-	position: absolute;
-	right: -20px;
-	transform: rotate(90deg);
-	z-index: 3;
-}
 
 .video-container {
 	position: absolute;
@@ -655,4 +625,106 @@ header {
 			margin: 0.5rem 0;
 		}
 	}
+}
+
+.honda-features
+{
+	h1{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: $l-font;
+		margin:1.5rem 0;
+	}
+
+.container{
+  .inner-honda-features
+	{
+	 display:grid;
+	grid-template-columns:repeat(3,1fr);
+	grid-template-rows: repeat(2,600px);
+
+	.honda-feature-card-body
+	{
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top:2rem;
+		position:relative;
+
+		
+		
+		& > *
+		{
+			margin:0.5rem 0;
+		}
+		h1{
+			text-align: center;
+			font-size: $l-font;
+			font-weight: 700;
+			text-transform: capitalize;
+			color:$main-title-color;
+			margin:0;
+		}
+		p{
+			font-size: $xs-font;
+			text-align: center;
+			font-weight: 400;
+			color:$main-title-color;
+		}
+
+	   a{
+		 @extend %link;  
+	   }
+	   i
+	   {
+		   margin-left:3px;
+	   }
+
+	   .small-triangle
+	   {
+		   top:-64px;
+		   left:45%;
+		   transform: rotate(0deg);
+		   
+		   border-bottom: 20px solid transparent;
+		   border-right: 20px solid transparent;
+		   border-left: 20px solid transparent;
+	   }
+	}
+
+	& div:nth-child(1),div:nth-child(3)
+	{
+		background:$light-grey;
+
+		.honda-feature-card-body
+		{
+			.small-triangle
+			{
+				border-bottom-color: $light-grey;
+			}
+
+			a{
+				color:#337ab7;
+			}
+		}
+	}
+	& div:nth-child(2).honda-feature-card
+	{
+		background:#242424;
+
+	   h1,p,a{
+		   color:$primary-color;
+	   }
+	   .small-triangle
+			{
+				border-bottom-color: #242424;
+			}
+	}
+
+	
+
+   }
+   
+
+}
 }

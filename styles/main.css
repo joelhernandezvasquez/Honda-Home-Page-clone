@@ -1,3 +1,50 @@
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid red;
+  margin-top: 3rem;
+}
+
+.mfont {
+  font-size: 1.2rem;
+}
+
+.lfont {
+  font-size: 2.5rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid #ff9600;
+  border-left: 40px solid transparent;
+}
+
+.small-triangle {
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #2783cb;
+  border-left: 15px solid transparent;
+  position: absolute;
+  right: -20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 3;
+}
+
+.letter-space {
+  letter-spacing: 2px;
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -26,20 +73,6 @@ img {
      object-position: center;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem;
-}
-
-.mfont {
-  font-size: 1.2rem;
-}
-
-.lfont {
-  font-size: 2.5rem;
-}
-
 .box {
   cursor: pointer;
 }
@@ -52,27 +85,6 @@ img {
   border-radius: 20px;
   font-size: 1.2rem;
   letter-spacing: 2px;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-right: 40px solid transparent;
-  border-bottom: 80px solid #ff9600;
-  border-left: 40px solid transparent;
-}
-
-.small-triangle {
-  width: 0;
-  height: 0;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid #2783cb;
-  border-left: 15px solid transparent;
-  position: absolute;
-  right: -20px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  z-index: 3;
 }
 
 .video-container {
@@ -862,5 +874,94 @@ header .main-nav .menu div:nth-child(3) a {
 
 .honda-history .inner-honda-history > * {
   margin: 0.5rem 0;
+}
+
+.honda-features h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+}
+
+.honda-features .container .inner-honda-features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (600px)[2];
+      grid-template-rows: repeat(2, 600px);
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body > * {
+  margin: 0.5rem 0;
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body h1 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #333333;
+  margin: 0;
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body p {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 400;
+  color: #333333;
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body i {
+  margin-left: 3px;
+}
+
+.honda-features .container .inner-honda-features .honda-feature-card-body .small-triangle {
+  top: -64px;
+  left: 45%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(1), .honda-features .container .inner-honda-features div:nth-child(3) {
+  background: #f9f9f9;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(1) .honda-feature-card-body .small-triangle, .honda-features .container .inner-honda-features div:nth-child(3) .honda-feature-card-body .small-triangle {
+  border-bottom-color: #f9f9f9;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(1) .honda-feature-card-body a, .honda-features .container .inner-honda-features div:nth-child(3) .honda-feature-card-body a {
+  color: #337ab7;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card {
+  background: #242424;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card h1, .honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card p, .honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card a {
+  color: #fefffb;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card .small-triangle {
+  border-bottom-color: #242424;
 }
 /*# sourceMappingURL=main.css.map */
