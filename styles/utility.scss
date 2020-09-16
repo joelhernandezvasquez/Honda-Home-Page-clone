@@ -1,11 +1,9 @@
-
-@import "variables"; 
+@import "variables";
 .container {
 	max-width: 90%;
 	margin: auto;
 	padding: 1rem;
-	border:1px solid red;
-	margin-top:3rem;
+	margin-top: 2.5rem;
 }
 
 .mfont {
@@ -36,14 +34,12 @@
 	z-index: 3;
 }
 
-.letter-space
-{
-  letter-spacing: 2px;
+.letter-space {
+	letter-spacing: 2px;
 }
 
-%link{
-    text-transform: uppercase;
-    font-size: $sm-font;
-    font-weight: 700;
-   
+%link {
+	text-transform: uppercase;
+	font-size: $sm-font;
+	font-weight: 700;
 }
