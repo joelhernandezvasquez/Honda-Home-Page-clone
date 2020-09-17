@@ -887,8 +887,8 @@ header .main-nav .menu div:nth-child(3) a {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (600px)[2];
-      grid-template-rows: repeat(2, 600px);
+  -ms-grid-rows: (500px)[2];
+      grid-template-rows: repeat(2, 500px);
 }
 
 .honda-features .container .inner-honda-features .honda-feature-card-body {
@@ -924,6 +924,8 @@ header .main-nav .menu div:nth-child(3) a {
   text-align: center;
   font-weight: 400;
   color: #333333;
+  line-height: 1.4;
+  padding: 1rem;
 }
 
 .honda-features .container .inner-honda-features .honda-feature-card-body i {
@@ -967,6 +969,11 @@ header .main-nav .menu div:nth-child(3) a {
 
 .honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card .small-triangle {
   border-bottom-color: #242424;
+}
+
+.honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card p {
+  line-height: 1.4;
+  padding: 1rem;
 }
 
 .honda-features .container .inner-honda-features .box-feature .bg-img {
@@ -1069,5 +1076,84 @@ header .main-nav .menu div:nth-child(3) a {
   font-size: 3rem;
   color: #eeeeee;
   margin-top: 2rem;
+}
+
+.honda-features .container .inner-honda-features .empty-box .bg-img {
+  width: 100%;
+  height: 100%;
+  background: url("../images/crv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-footer {
+  background: #eeeeee;
+  margin-top: 1rem;
+}
+
+.main-footer .container {
+  border: 1px solid red;
+}
+
+.main-footer .container .inner-footer-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.main-footer .container .inner-footer-links div:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+}
+
+.main-footer .container .inner-footer-links div:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.main-footer .container .inner-footer-links div:nth-child(3) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.main-footer .container .inner-footer-links div:nth-child(4) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.main-footer .container .inner-footer-links div:nth-child(5) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.main-footer .container .inner-footer-links div:nth-child(6) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
 }
 /*# sourceMappingURL=main.css.map */
