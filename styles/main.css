@@ -1094,6 +1094,7 @@ header .main-nav .menu div:nth-child(3) a {
 
 .main-footer .container {
   border: 1px solid red;
+  padding-top: 3rem;
 }
 
 .main-footer .container .inner-footer-links {
@@ -1101,6 +1102,43 @@ header .main-nav .menu div:nth-child(3) a {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+}
+
+.main-footer .container .inner-footer-links h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #8f8f8f;
+  font-weight: bold;
+}
+
+.main-footer .container .inner-footer-links li {
+  margin: 1.2rem 0;
+}
+
+.main-footer .container .inner-footer-links li p {
+  font-size: 0.8rem;
+  color: #7c7b73;
+  margin-top: 5px;
+}
+
+.main-footer .container .inner-footer-links a {
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.main-footer .container .inner-footer-links a:hover {
+  color: #8f8f8f;
+  cursor: pointer;
+}
+
+.main-footer .container .inner-footer-links i {
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.main-footer .container .inner-footer-links div {
+  margin-top: 0.8rem;
 }
 
 .main-footer .container .inner-footer-links div:nth-child(1) {
@@ -1155,5 +1193,50 @@ header .main-nav .menu div:nth-child(3) a {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+}
+
+.main-footer .container .social-media-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+.main-footer .container .social-media-container .icon-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 1rem;
+}
+
+.main-footer .container .social-media-container .icon-container i {
+  color: #fefffb;
+  font-size: 1.2rem;
+}
+
+.main-footer .container .social-media-container .icon-container:hover {
+  background: #474747;
 }
 /*# sourceMappingURL=main.css.map */
