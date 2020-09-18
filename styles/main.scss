@@ -155,7 +155,13 @@ header {
 			font-size: 0.8rem;
 			margin-left: 10px;
 			font-weight: 700;
+			
 		}
+
+	 .menu li:first-child span:hover{
+			color:$medium-grey;	
+		}
+
 		.menu div:nth-child(2) {
 			position: relative;
 			display: flex;
@@ -177,6 +183,8 @@ header {
 			}
 		}
 	}
+
+	
 }
 
 .banner {
@@ -185,6 +193,28 @@ header {
 	background-position: center;
 	background-size: cover;
 	position: relative;
+
+	.search-box{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:130px;
+		background:$dark-grey;
+		z-index:3;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+
+		input{
+			width:100%;
+			background:white;
+		}
+		button{
+			background:red;
+			color:white;
+		}
+	}
 
 	.overlay {
 		width: 100%;
@@ -808,7 +838,6 @@ header {
 	background: $dark-grey;
 	margin-top: 1rem;
 	.container {
-		border: 1px solid red;
 		padding-top: 3rem;
 		.inner-footer-links {
 			display: grid;
@@ -877,7 +906,7 @@ header {
 			align-items: center;
 			justify-content: center;
 			width: 50%;
-			margin: 2rem auto;
+			margin: 3rem auto 1rem auto;
 			padding: 1rem 0;
 
 			.icon-container {
@@ -897,6 +926,101 @@ header {
 			}
 			.icon-container:hover {
 				background: #474747;
+			}
+		}
+		.copyright-container
+		{
+			@extend %footer-container;
+		   
+			p{
+				text-align: center;
+				font-size: $xs-font;
+				color:$medium-grey;	
+			}
+
+		}
+		.policy-container
+		{
+			width:55%;
+			margin:1rem auto;
+			
+		
+			ul{
+				display:flex;
+				align-items: center;
+				justify-content: space-between;
+
+				a{
+					font-size: 0.8rem;
+					color:$link-color;
+					text-decoration:underline;
+				}
+				a:hover{
+					color:$main-title-color;
+				}
+				li::after
+				{
+				  content:"|";
+				  color:$medium-grey;
+				  margin-left:5px;
+				}
+				& li:last-child::after{
+					content:"";
+				}
+			}
+			
+		}
+
+		.cookies-info
+		{
+			@extend %footer-container;
+			margin-top:1rem;
+			
+			p{
+				color:$medium-grey;
+				font-size: 0.8rem;
+				text-align: center;
+			}
+			a{
+				color:$link-color;
+				text-decoration: underline;
+			}
+			a:hover{
+				color:$main-title-color;
+			}
+		}
+		.outter-footer-links
+		{
+			@extend %footer-container;
+			margin-top:1rem;
+			padding:1rem 0;
+
+			ul{
+				display:flex;
+				align-items: center;
+				justify-content: center;
+
+
+				a{
+					color:$link-color;
+					font-weight: 500;
+					font-size: $sm-font;
+				}
+				
+				li::before
+				{
+				  content:"|";
+				  color:$main-title-color;
+				  width:10px;
+				  height:15px;
+				  margin-left:2px;
+				}
+				& li:first-child::before{
+					content:"";
+				}
+
+				
+
 			}
 		}
 	}
