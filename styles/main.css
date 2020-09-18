@@ -299,10 +299,10 @@ header .main-nav .menu div:nth-child(3) a {
 
 .banner .search-box {
   position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: 0px;
   background: #eeeeee;
   z-index: 3;
   display: -webkit-box;
@@ -311,19 +311,67 @@ header .main-nav .menu div:nth-child(3) a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 2rem;
+  -webkit-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
 }
 
 .banner .search-box input {
-  width: 100%;
-  background: white;
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  color: black;
+  font-size: 1.4rem;
+  border: none;
+}
+
+.banner .search-box input:focus {
+  outline: none;
+}
+
+.banner .search-box input::-webkit-input-placeholder {
+  font-size: 1.4rem;
+  color: #969896;
+}
+
+.banner .search-box input:-ms-input-placeholder {
+  font-size: 1.4rem;
+  color: #969896;
+}
+
+.banner .search-box input::-ms-input-placeholder {
+  font-size: 1.4rem;
+  color: #969896;
+}
+
+.banner .search-box input::placeholder {
+  font-size: 1.4rem;
+  color: #969896;
 }
 
 .banner .search-box button {
-  background: red;
-  color: white;
+  background: none;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.banner .search-box button:hover {
+  color: #969896;
+}
+
+.banner .search-box.showSearchBox {
+  height: 90px;
 }
 
 .banner .overlay {
@@ -358,6 +406,16 @@ header .main-nav .menu div:nth-child(3) a {
 
 .banner .overlay a {
   margin: 1rem 0 8rem 0;
+}
+
+.menu-bar {
+  width: 300px;
+  height: 100vh;
+  background: #fefffb;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 7;
 }
 
 .airbag-alert {

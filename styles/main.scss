@@ -155,11 +155,10 @@ header {
 			font-size: 0.8rem;
 			margin-left: 10px;
 			font-weight: 700;
-			
 		}
 
-	 .menu li:first-child span:hover{
-			color:$medium-grey;	
+		.menu li:first-child span:hover {
+			color: $medium-grey;
 		}
 
 		.menu div:nth-child(2) {
@@ -183,8 +182,6 @@ header {
 			}
 		}
 	}
-
-	
 }
 
 .banner {
@@ -194,26 +191,53 @@ header {
 	background-size: cover;
 	position: relative;
 
-	.search-box{
-		position:fixed;
-		top:0;
-		left:0;
-		width:100%;
-		height:130px;
-		background:$dark-grey;
-		z-index:3;
-		display:flex;
+	.search-box {
+		position: fixed;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		height: 0px;
+		background: $dark-grey;
+		z-index: 3;
+		display: flex;
 		align-items: center;
-		justify-content: center;
-
-		input{
-			width:100%;
-			background:white;
+		padding-left: 2rem;
+		transition: height 0.5s ease-out;
+		input {
+			width: 90%;
+			height: 100%;
+			background: transparent;
+			color: $main-color;
+			font-size: $l-font;
+			border: none;
 		}
-		button{
-			background:red;
-			color:white;
+		input:focus {
+			outline: none;
 		}
+		input::placeholder {
+			font-size: $l-font;
+			color: $medium-grey;
+		}
+		button {
+			background: none;
+			color: $main-color;
+			font-size: $xs-font;
+			padding: 0.5rem 1rem;
+			align-self: center;
+			border: none;
+			cursor: pointer;
+			outline: none;
+			font-weight: 600;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin-left: 20px;
+		}
+		button:hover {
+			color: $medium-grey;
+		}
+	}
+	.search-box.showSearchBox {
+		height: 90px;
 	}
 
 	.overlay {
@@ -239,6 +263,16 @@ header {
 			margin: 1rem 0 8rem 0;
 		}
 	}
+}
+
+.menu-bar {
+	width: 300px;
+	height: 100vh;
+	background: $primary-color;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	z-index: 7;
 }
 
 .airbag-alert {
@@ -928,99 +962,86 @@ header {
 				background: #474747;
 			}
 		}
-		.copyright-container
-		{
+		.copyright-container {
 			@extend %footer-container;
-		   
-			p{
+
+			p {
 				text-align: center;
 				font-size: $xs-font;
-				color:$medium-grey;	
+				color: $medium-grey;
 			}
-
 		}
-		.policy-container
-		{
-			width:55%;
-			margin:1rem auto;
-			
-		
-			ul{
-				display:flex;
+		.policy-container {
+			width: 55%;
+			margin: 1rem auto;
+
+			ul {
+				display: flex;
 				align-items: center;
 				justify-content: space-between;
 
-				a{
+				a {
 					font-size: 0.8rem;
-					color:$link-color;
-					text-decoration:underline;
+					color: $link-color;
+					text-decoration: underline;
 				}
-				a:hover{
-					color:$main-title-color;
+				a:hover {
+					color: $main-title-color;
 				}
-				li::after
-				{
-				  content:"|";
-				  color:$medium-grey;
-				  margin-left:5px;
+				li::after {
+					content: "|";
+					color: $medium-grey;
+					margin-left: 5px;
 				}
-				& li:last-child::after{
-					content:"";
+				& li:last-child::after {
+					content: "";
 				}
 			}
-			
 		}
 
-		.cookies-info
-		{
+		.cookies-info {
 			@extend %footer-container;
-			margin-top:1rem;
-			
-			p{
-				color:$medium-grey;
+			margin-top: 1rem;
+
+			p {
+				color: $medium-grey;
 				font-size: 0.8rem;
 				text-align: center;
 			}
-			a{
-				color:$link-color;
+			a {
+				color: $link-color;
 				text-decoration: underline;
 			}
-			a:hover{
-				color:$main-title-color;
+			a:hover {
+				color: $main-title-color;
 			}
 		}
-		.outter-footer-links
-		{
+		.outter-footer-links {
 			@extend %footer-container;
-			margin-top:1rem;
-			padding:1rem 0;
+			margin-top: 1rem;
+			padding: 1rem 0;
 
-			ul{
-				display:flex;
+			ul {
+				display: flex;
 				align-items: center;
 				justify-content: center;
 
-
-				a{
-					color:$link-color;
+				a {
+					color: $link-color;
 					font-weight: 500;
 					font-size: $sm-font;
 				}
-				
-				li::before
-				{
-				  content:"|";
-				  color:$main-title-color;
-				  width:10px;
-				  height:15px;
-				  margin-left:2px;
-				}
-				& li:first-child::before{
-					content:"";
-				}
 
-				
-
+				li::before {
+					content: "|";
+					color: $main-title-color;
+					width: 10px;
+					height: 15px;
+					margin-left: 2px;
+				}
+				& li:first-child::before {
+					content: "";
+				}
 			}
 		}
 	}
