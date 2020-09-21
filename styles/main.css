@@ -58,6 +58,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
@@ -295,6 +296,10 @@ header .main-nav .menu div:nth-child(3) a {
   background-position: center;
   background-size: cover;
   position: relative;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .banner .search-box {
@@ -416,6 +421,79 @@ header .main-nav .menu div:nth-child(3) a {
   top: 60px;
   left: 0;
   z-index: 7;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.menu-bar i, .menu-bar span {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.menu-bar span {
+  display: inline-block;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+.menu-bar i {
+  margin-left: 10px;
+}
+
+.menu-bar .home-container {
+  width: 100%;
+  padding: 1.5rem 1.4rem;
+  -webkit-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+  cursor: pointer;
+}
+
+.menu-bar .home-container:hover {
+  background: #eeeeee;
+}
+
+.menu-bar .accordion-container .accordion-header {
+  padding: 1.5rem 1.4rem;
+  border-top: 0.5px solid #969896;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+
+.menu-bar .accordion-container .accordion-header:hover {
+  background: #eeeeee;
+}
+
+.menu-bar .accordion-container .accordion-body {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+.menu-bar .accordion-container .accordion-body li {
+  margin: 1rem 0;
+  padding: 0.8rem 3rem;
+  width: 100%;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.menu-bar .accordion-container .accordion-body li:hover {
+  background: #eeeeee;
+}
+
+.menu-bar .accordion-container .accordion-body a {
+  font-size: 0.9rem;
+}
+
+.menu-bar .accordion-container .accordion-body.activeAccordion {
+  height: 500px;
 }
 
 .airbag-alert {
@@ -425,6 +503,10 @@ header .main-nav .menu div:nth-child(3) a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .airbag-alert .airbag-warning-container {
@@ -501,6 +583,13 @@ header .main-nav .menu div:nth-child(3) a {
   color: #ff9600;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.gallery {
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 
 .gallery .inner-gallery {
@@ -1430,5 +1519,34 @@ header .main-nav .menu div:nth-child(3) a {
 
 .main-footer .container .outter-footer-links ul li:first-child::before {
   content: "";
+}
+
+.overlay-cover {
+  width: 90%;
+  height: 100vh;
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+.overlay-cover.active {
+  display: block;
+}
+
+.move {
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+body.hideScrollBar {
+  overflow: hidden;
+}
+
+.menu-bar.open {
+  -webkit-transform: translateX(1px);
+          transform: translateX(1px);
 }
 /*# sourceMappingURL=main.css.map */
