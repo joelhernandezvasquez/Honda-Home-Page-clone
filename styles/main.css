@@ -238,10 +238,22 @@ header .main-nav .menu .items {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 header .main-nav .menu .items i {
   font-size: 1.7rem;
+}
+
+header .main-nav .menu .items .close-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+header .main-nav .menu .items .bar-icon {
+  visibility: visible;
 }
 
 header .main-nav .menu li:first-child span {
@@ -427,9 +439,11 @@ header .main-nav .menu div:nth-child(3) a {
   transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  border-top: 1px solid red;
 }
 
-.menu-bar i, .menu-bar span {
+.menu-bar i,
+.menu-bar span {
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -493,7 +507,7 @@ header .main-nav .menu div:nth-child(3) a {
 }
 
 .menu-bar .accordion-container .accordion-body.activeAccordion {
-  height: 500px;
+  height: 480px;
 }
 
 .airbag-alert {
@@ -1548,5 +1562,13 @@ body.hideScrollBar {
 .menu-bar.open {
   -webkit-transform: translateX(1px);
           transform: translateX(1px);
+}
+
+.close-icon.show {
+  display: block;
+}
+
+.bar-icon.hidden {
+  visibility: hidden;
 }
 /*# sourceMappingURL=main.css.map */

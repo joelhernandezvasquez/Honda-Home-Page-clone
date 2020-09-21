@@ -10,8 +10,6 @@
 body {
 	font-family: $main-font;
 	overflow-x: hidden;
-	
-	
 }
 
 ul {
@@ -148,9 +146,19 @@ header {
 				cursor: pointer;
 				display: flex;
 				align-items: center;
+				position: relative;
 
 				i {
 					font-size: 1.7rem;
+				}
+				.close-icon {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					display: none;
+				}
+				.bar-icon {
+					visibility: visible;
 				}
 			}
 		}
@@ -279,74 +287,64 @@ header {
 	z-index: 7;
 	transform: translateX(-300px);
 	transition: transform 0.5s ease-out;
-	i,span{
+	border-top: 1px solid red;
+	i,
+	span {
 		font-weight: bold;
 		font-size: $xs-font;
-		
-		
 	}
-	span{
-		display:inline-block;
-		margin-left:5px;
+	span {
+		display: inline-block;
+		margin-left: 5px;
 		text-transform: uppercase;
-		
 	}
-	i{
-		margin-left:10px;
+	i {
+		margin-left: 10px;
 	}
 
-	.home-container{
-		width:100%;
-		padding:1.5rem 1.4rem;
+	.home-container {
+		width: 100%;
+		padding: 1.5rem 1.4rem;
 		transition: background 0.2s ease-in;
 		cursor: pointer;
-				
 	}
-	.home-container:hover
-	{
-		background:$dark-grey;
+	.home-container:hover {
+		background: $dark-grey;
 	}
 
-	.accordion-container{
-	
-
-		.accordion-header{
-			padding:1.5rem 1.4rem;
-			border-top:0.5px solid $medium-grey;
+	.accordion-container {
+		.accordion-header {
+			padding: 1.5rem 1.4rem;
+			border-top: 0.5px solid $medium-grey;
 			cursor: pointer;
-			transition:background 0.2s ease-in;
-			
-		   
+			transition: background 0.2s ease-in;
 		}
-		.accordion-header:hover{
-			background:$dark-grey;
+		.accordion-header:hover {
+			background: $dark-grey;
 		}
-		.accordion-body{
-			display:block;
-			height:0px;
+		.accordion-body {
+			display: block;
+			height: 0px;
 			overflow: hidden;
-			transition:height 0.3s ease-in-out;
-			
-			li{
-				margin:1rem 0;
-				padding:0.8rem 3rem;
-				width:100%;
-				transition:background 0.3s ease-in-out;
+			transition: height 0.3s ease-in-out;
+
+			li {
+				margin: 1rem 0;
+				padding: 0.8rem 3rem;
+				width: 100%;
+				transition: background 0.3s ease-in-out;
 			}
-			li:hover{
-				background:$dark-grey;
+			li:hover {
+				background: $dark-grey;
 			}
-			a{
+			a {
 				font-size: $xs-font;
 			}
 		}
-		.accordion-body.activeAccordion{
-			height: 500px;
-
+		.accordion-body.activeAccordion {
+			height: 480px;
 		}
 	}
-
-
 }
 
 .airbag-alert {
@@ -1123,28 +1121,33 @@ header {
 	}
 }
 
-.overlay-cover{
-	width:90%;
-	height:100vh;
+.overlay-cover {
+	width: 90%;
+	height: 100vh;
 	position: absolute;
-	top:60px;
-	left:300px;
-	background:rgba(0,0,0,0.5);
-	display:none;
+	top: 60px;
+	left: 300px;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
 	z-index: 100;
 }
-.overlay-cover.active{
+.overlay-cover.active {
 	display: block;
-	
 }
 
-.move{
+.move {
 	transform: translateX(300px);
 }
-body.hideScrollBar{
+body.hideScrollBar {
 	overflow: hidden;
 }
 
-.menu-bar.open{
+.menu-bar.open {
 	transform: translateX(1px);
+}
+.close-icon.show {
+	display: block;
+}
+.bar-icon.hidden {
+	visibility: hidden;
 }
