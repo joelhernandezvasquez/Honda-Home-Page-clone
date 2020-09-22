@@ -77,13 +77,13 @@ const openAccordion = (e) => {
 	const isAccordionHeader = e.target.classList.contains("accordion-header");
 	let currentActiveAccordionBody = document.querySelector(".activeAccordion");
 	const accordionBodyActive = e.target.nextElementSibling;
-	const bar1 = e.target.firstElementChild.children[0];
-	const bar2 = e.target.firstElementChild.children[1];
+	const bar = e.target.firstElementChild.firstElementChild;
+	console.log(bar);
 
 	if (isAccordionHeader) {
 		if (currentActiveAccordionBody === null) {
-			bar1.classList.toggle("rotate");
-			bar2.classList.toggle("rotate");
+			bar.classList.toggle("rotate");
+
 			currentActiveAccordionBody = accordionBodyActive;
 			currentActiveAccordionBody.classList.add("activeAccordion");
 
@@ -91,14 +91,14 @@ const openAccordion = (e) => {
 		}
 
 		if (currentActiveAccordionBody === accordionBodyActive) {
-			bar1.classList.toggle("rotate");
-			bar2.classList.toggle("rotate");
+			bar.classList.toggle("rotate");
+
 			currentActiveAccordionBody.classList.remove("activeAccordion");
 			return;
 		}
 
-		bar1.classList.toggle("rotate");
-		bar2.classList.toggle("rotate");
+		bar.classList.toggle("rotate");
+
 		currentActiveAccordionBody.classList.remove("activeAccordion");
 		accordionBodyActive.classList.add("activeAccordion");
 	}
