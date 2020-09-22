@@ -50,7 +50,6 @@ function changeHamburgerIcon() {
 	closeicon.classList.toggle("show");
 }
 
-
 function movetoLeft() {
 	const bannerSection = document.querySelector(".banner");
 	const airbagSection = document.querySelector(".airbag-alert");
@@ -78,31 +77,32 @@ const openAccordion = (e) => {
 	const isAccordionHeader = e.target.classList.contains("accordion-header");
 	let currentActiveAccordionBody = document.querySelector(".activeAccordion");
 	const accordionBodyActive = e.target.nextElementSibling;
-	
-	spinPlusIconAnimation(e.target.firstElementChild);
-	
+	const bar1 = e.target.firstElementChild.children[0];
+	const bar2 = e.target.firstElementChild.children[1];
 
 	if (isAccordionHeader) {
 		if (currentActiveAccordionBody === null) {
+			bar1.classList.toggle("rotate");
+			bar2.classList.toggle("rotate");
 			currentActiveAccordionBody = accordionBodyActive;
 			currentActiveAccordionBody.classList.add("activeAccordion");
+
 			return;
 		}
 
 		if (currentActiveAccordionBody === accordionBodyActive) {
+			bar1.classList.toggle("rotate");
+			bar2.classList.toggle("rotate");
 			currentActiveAccordionBody.classList.remove("activeAccordion");
 			return;
 		}
 
+		bar1.classList.toggle("rotate");
+		bar2.classList.toggle("rotate");
 		currentActiveAccordionBody.classList.remove("activeAccordion");
 		accordionBodyActive.classList.add("activeAccordion");
 	}
 };
-
-function spinPlusIconAnimation(icon)
-{
-  
-}
 
 // EVENTS
 

@@ -155,14 +155,13 @@ header {
 					position: absolute;
 					top: 0px;
 					left: 0px;
-					display:none;
+					display: none;
 				}
 				.close-icon.show {
 					display: block;
 				}
 				.bar-icon {
 					visibility: visible;
-					
 				}
 				.bar-icon.hidden {
 					visibility: hidden;
@@ -324,6 +323,38 @@ header {
 			border-top: 0.5px solid $medium-grey;
 			cursor: pointer;
 			transition: background 0.2s ease-in;
+			display: flex;
+			align-items: center;
+
+			.plus-icon-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin: 0 5px 0 10px;
+
+				div {
+					width: 12px;
+					height: 2px;
+					background: black;
+				}
+				.bar1 {
+					transform: translateY(2px);
+
+					//border: 1px solid red;
+				}
+				.bar2 {
+					transform: rotate(90deg);
+					//border: 1px solid blue;
+					transition: transform 0.2s ease-out;
+					//transform:tr
+				}
+			}
+			.bar1.rotate {
+			}
+			.bar2.rotate {
+				transform: rotate(360deg);
+			}
 		}
 		.accordion-header:hover {
 			background: $dark-grey;
@@ -1151,5 +1182,3 @@ body.hideScrollBar {
 .menu-bar.open {
 	transform: translateX(1px);
 }
-
-
