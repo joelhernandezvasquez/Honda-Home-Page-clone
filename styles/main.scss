@@ -155,10 +155,17 @@ header {
 					position: absolute;
 					top: 0px;
 					left: 0px;
-					display: none;
+					display:none;
+				}
+				.close-icon.show {
+					display: block;
 				}
 				.bar-icon {
 					visibility: visible;
+					
+				}
+				.bar-icon.hidden {
+					visibility: hidden;
 				}
 			}
 		}
@@ -287,7 +294,6 @@ header {
 	z-index: 7;
 	transform: translateX(-300px);
 	transition: transform 0.5s ease-out;
-	border-top: 1px solid red;
 	i,
 	span {
 		font-weight: bold;
@@ -1145,9 +1151,5 @@ body.hideScrollBar {
 .menu-bar.open {
 	transform: translateX(1px);
 }
-.close-icon.show {
-	display: block;
-}
-.bar-icon.hidden {
-	visibility: hidden;
-}
+
+

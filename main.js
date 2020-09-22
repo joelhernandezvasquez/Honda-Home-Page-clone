@@ -3,8 +3,8 @@ const hamburgerIcon = document.querySelector(".hamburger-container");
 const menuBar = document.querySelector(".menu-bar");
 const body = document.querySelector("body");
 const searchBox = document.querySelector(".search-box");
-const barIcon = document.querySelector(".bar-icon");
-const closeicon = document.querySelector(".close-icon");
+/* const barIcon = document.querySelector(".bar-icon");
+const closeicon = document.querySelector(".close-icon"); */
 
 const mobiiltyContainer = document.querySelector(".mobility");
 
@@ -32,12 +32,10 @@ const showSearchBox = () => {
 };
 
 const openMenuBar = () => {
-	//changeHamburgerIcon();
+	changeHamburgerIcon();
 	movetoLeft();
 	//setTimeout(activateOverlay,50);
 	menuBar.classList.toggle("open");
-	barIcon.classList.toggle("hidden");
-	closeicon.classList.toggle("show");
 
 	if (searchBox.classList.contains("showSearchBox")) {
 		searchBox.classList.toggle("showSearchBox");
@@ -45,20 +43,13 @@ const openMenuBar = () => {
 };
 
 function changeHamburgerIcon() {
-	const hamburgerIcon = document.querySelector(".hamburger-container i");
+	const barIcon = document.querySelector(".bar-icon");
 	const closeicon = document.querySelector(".close-icon");
 
-	hamburgerIcon.style.visibility = "hidden";
-	closeicon.style.display = "block";
+	barIcon.classList.toggle("hidden");
+	closeicon.classList.toggle("show");
 }
 
-function changeCloseIcon() {
-	const hamburgerIcon = document.querySelector(".hamburger-container i");
-	const closeicon = document.querySelector("#close-icon");
-
-	hamburgerIcon.style.visibility = "visible";
-	closeicon.style.display = "none";
-}
 
 function movetoLeft() {
 	const bannerSection = document.querySelector(".banner");
@@ -87,6 +78,9 @@ const openAccordion = (e) => {
 	const isAccordionHeader = e.target.classList.contains("accordion-header");
 	let currentActiveAccordionBody = document.querySelector(".activeAccordion");
 	const accordionBodyActive = e.target.nextElementSibling;
+	
+	spinPlusIconAnimation(e.target.firstElementChild);
+	
 
 	if (isAccordionHeader) {
 		if (currentActiveAccordionBody === null) {
@@ -105,7 +99,10 @@ const openAccordion = (e) => {
 	}
 };
 
-function spinSearchIcon() {}
+function spinPlusIconAnimation(icon)
+{
+  
+}
 
 // EVENTS
 
