@@ -310,6 +310,38 @@ header .main-nav .menu div:nth-child(3) a {
   font-weight: bold;
 }
 
+header .main-nav .menu div:nth-child(3) li:nth-child(2) {
+  border: 1px solid red;
+  position: relative;
+  overflow: hidden;
+}
+
+header .main-nav .menu div:nth-child(3) li:nth-child(2) .search-icon {
+  visibility: visible;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+header .main-nav .menu div:nth-child(3) li:nth-child(2) .search-icon.hidden {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  visibility: hidden;
+}
+
+header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show {
+  opacity: 1;
+}
+
 .banner {
   height: 75vh;
   background: url("../images/banner.jpg");
@@ -459,6 +491,7 @@ header .main-nav .menu div:nth-child(3) a {
   display: inline-block;
   margin-left: 5px;
   text-transform: uppercase;
+  color: #333333;
 }
 
 .menu-bar i {
@@ -471,6 +504,11 @@ header .main-nav .menu div:nth-child(3) a {
   -webkit-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
   cursor: pointer;
+}
+
+.menu-bar .home-container span {
+  color: black;
+  font-weight: bold;
 }
 
 .menu-bar .home-container:hover {
@@ -491,16 +529,20 @@ header .main-nav .menu div:nth-child(3) a {
           align-items: center;
 }
 
+.menu-bar .accordion-container .accordion-header .plus-icon-container {
+  margin-left: 12px;
+}
+
 .menu-bar .accordion-container .accordion-header .plus-icon-container .bar {
   position: relative;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 .menu-bar .accordion-container .accordion-header .plus-icon-container .bar:before, .menu-bar .accordion-container .accordion-header .plus-icon-container .bar:after {
   content: "";
   position: absolute;
-  background: black;
+  background: #333333;
   -webkit-transition: -webkit-transform 0.25s ease-out;
   transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
@@ -510,16 +552,16 @@ header .main-nav .menu div:nth-child(3) a {
 .menu-bar .accordion-container .accordion-header .plus-icon-container .bar:before {
   top: 0;
   left: 50%;
-  width: 5px;
+  width: 3px;
   height: 100%;
-  margin-left: -3px;
+  margin-left: -2px;
 }
 
 .menu-bar .accordion-container .accordion-header .plus-icon-container .bar:after {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 3px;
   margin-top: -2px;
 }
 

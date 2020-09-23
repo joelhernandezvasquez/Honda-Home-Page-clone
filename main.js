@@ -3,8 +3,7 @@ const hamburgerIcon = document.querySelector(".hamburger-container");
 const menuBar = document.querySelector(".menu-bar");
 const body = document.querySelector("body");
 const searchBox = document.querySelector(".search-box");
-/* const barIcon = document.querySelector(".bar-icon");
-const closeicon = document.querySelector(".close-icon"); */
+
 
 const mobiiltyContainer = document.querySelector(".mobility");
 
@@ -21,6 +20,9 @@ const playVideo = () => {
 };
 
 const showSearchBox = () => {
+	
+	changeSearchIcon();
+
 	const input = searchBox.querySelector("input");
 	searchBox.classList.toggle("showSearchBox");
 	input.focus();
@@ -30,6 +32,15 @@ const showSearchBox = () => {
 		movetoLeft();
 	}
 };
+
+function changeSearchIcon()
+{
+  const search = document.querySelector(".search-icon");
+  const close = document.querySelector(".close-icon-search");
+  
+   search.classList.toggle("hidden");
+   close.classList.toggle("show");
+}
 
 const openMenuBar = () => {
 	changeHamburgerIcon();
@@ -77,13 +88,16 @@ const openAccordion = (e) => {
 	const isAccordionHeader = e.target.classList.contains("accordion-header");
 	let currentActiveAccordionBody = document.querySelector(".activeAccordion");
 	const accordionBodyActive = e.target.nextElementSibling;
+	let currentBar = document.querySelector(".rotate");
 	const bar = e.target.firstElementChild.firstElementChild;
-	console.log(bar);
+	
 
 	if (isAccordionHeader) {
 		if (currentActiveAccordionBody === null) {
-			bar.classList.toggle("rotate");
-
+			
+			
+		   currentBar = bar;
+		   currentBar.classList.add("rotate");
 			currentActiveAccordionBody = accordionBodyActive;
 			currentActiveAccordionBody.classList.add("activeAccordion");
 
@@ -91,22 +105,32 @@ const openAccordion = (e) => {
 		}
 
 		if (currentActiveAccordionBody === accordionBodyActive) {
-			bar.classList.toggle("rotate");
-
+			
+			
+			currentBar.classList.toggle("rotate");
 			currentActiveAccordionBody.classList.remove("activeAccordion");
 			return;
 		}
 
-		bar.classList.toggle("rotate");
-
+		
+	   currentBar.classList.remove("rotate");
+	   bar.classList.add("rotate");
 		currentActiveAccordionBody.classList.remove("activeAccordion");
 		accordionBodyActive.classList.add("activeAccordion");
+		
 	}
 };
+
+function setMenuBar()
+{
+	const bar = document.querySelector("#default-bar");
+	bar.classList.add("rotate");
+}
 
 // EVENTS
 
 //mobiiltyContainer.addEventListener("mouseover", playVideo);
+window.addEventListener("load",setMenuBar);
 searchIcon.addEventListener("click", showSearchBox);
 hamburgerIcon.addEventListener("click", openMenuBar);
 menuBar.addEventListener("click", openAccordion);

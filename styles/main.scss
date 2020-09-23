@@ -178,6 +178,8 @@ header {
 			color: $medium-grey;
 		}
 
+
+
 		.menu div:nth-child(2) {
 			position: relative;
 			display: flex;
@@ -192,10 +194,38 @@ header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			
 
 			a {
 				font-size: 0.9rem;
 				font-weight: bold;
+			}
+		}
+		.menu div:nth-child(3) li:nth-child(2){
+			border:1px solid red;
+			position:relative;
+			overflow: hidden;
+
+            .search-icon{
+				visibility:visible;
+				z-index: 1;
+				transition: transform 0.5s ease-out;
+				
+			
+			}
+			.close-icon-search{
+				position: absolute;
+				top:0;
+				left:0;
+				opacity:0;
+			}
+
+			.search-icon.hidden{
+				transform: rotate(180deg);
+				visibility: hidden;
+			}
+			.close-icon-search.show{
+				opacity: 1;
 			}
 		}
 	}
@@ -302,6 +332,7 @@ header {
 		display: inline-block;
 		margin-left: 5px;
 		text-transform: uppercase;
+		color:$main-title-color;
 	}
 	i {
 		margin-left: 10px;
@@ -312,6 +343,11 @@ header {
 		padding: 1.5rem 1.4rem;
 		transition: background 0.2s ease-in;
 		cursor: pointer;
+
+		span{
+			color:$main-color;
+			font-weight: bold;
+		}
 	}
 	.home-container:hover {
 		background: $dark-grey;
@@ -328,32 +364,33 @@ header {
 
 			.plus-icon-container {
 				//border: 1px solid red;
+				margin-left:12px;
 
 				.bar {
 					position: relative;
-					width: 15px;
-					height: 15px;
+					width: 10px;
+					height: 10px;
 
 					&:before,
 					&:after {
 						content: "";
 						position: absolute;
-						background: black;
+						background: $main-title-color;
 						transition: transform 0.25s ease-out;
 					}
 					&:before {
 						top: 0;
 						left: 50%;
-						width: 5px;
+						width: 3px;
 						height: 100%;
 						//border: 1px solid blue;
-						margin-left: -3px;
+						margin-left: -2px;
 					}
 					&:after {
 						top: 50%;
 						left: 0;
 						width: 100%;
-						height: 5px;
+						height: 3px;
 						margin-top: -2px;
 					}
 				}
