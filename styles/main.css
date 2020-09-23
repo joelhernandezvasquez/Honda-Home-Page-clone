@@ -311,18 +311,21 @@ header .main-nav .menu div:nth-child(3) a {
 }
 
 header .main-nav .menu div:nth-child(3) li:nth-child(2) {
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
 }
 
+header .main-nav .menu div:nth-child(3) li:nth-child(2) i {
+  font-size: 2rem;
+}
+
 header .main-nav .menu div:nth-child(3) li:nth-child(2) .search-icon {
-  visibility: visible;
+  opacity: 1;
   z-index: 1;
-  -webkit-transition: -webkit-transform 0.5s ease-out;
-  transition: -webkit-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
-  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform-origin: left left;
+          transform-origin: left left;
 }
 
 header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search {
@@ -330,12 +333,16 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search {
   top: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 header .main-nav .menu div:nth-child(3) li:nth-child(2) .search-icon.hidden {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  visibility: hidden;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  opacity: 0;
 }
 
 header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show {
@@ -463,6 +470,10 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
 
 .banner .overlay a {
   margin: 1rem 0 8rem 0;
+}
+
+.banner .overlay p {
+  font-size: 1.4rem;
 }
 
 .menu-bar {
@@ -1633,14 +1644,14 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
 }
 
 .overlay-cover {
-  width: 90%;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 60px;
-  left: 300px;
-  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
   display: none;
-  z-index: 100;
+  z-index: 20;
 }
 
 .overlay-cover.active {
@@ -1659,5 +1670,6 @@ body.hideScrollBar {
 .menu-bar.open {
   -webkit-transform: translateX(1px);
           transform: translateX(1px);
+  z-index: 30;
 }
 /*# sourceMappingURL=main.css.map */

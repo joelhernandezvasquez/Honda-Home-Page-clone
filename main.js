@@ -4,23 +4,11 @@ const menuBar = document.querySelector(".menu-bar");
 const body = document.querySelector("body");
 const searchBox = document.querySelector(".search-box");
 
-
-const mobiiltyContainer = document.querySelector(".mobility");
+const mobilityVideo = document.querySelector(".mobility");
 
 // METHODS
 
-const playVideo = () => {
-	const content = document.querySelector(".content");
-	const video = document.querySelector(".video-container video");
-
-	console.log(video);
-
-	content.style.background = "none";
-	video.play();
-};
-
 const showSearchBox = () => {
-	
 	changeSearchIcon();
 
 	const input = searchBox.querySelector("input");
@@ -33,19 +21,19 @@ const showSearchBox = () => {
 	}
 };
 
-function changeSearchIcon()
-{
-  const search = document.querySelector(".search-icon");
-  const close = document.querySelector(".close-icon-search");
-  
-   search.classList.toggle("hidden");
-   close.classList.toggle("show");
+function changeSearchIcon() {
+	const search = document.querySelector(".search-icon");
+	const close = document.querySelector(".close-icon-search");
+
+	search.classList.toggle("hidden");
+	close.classList.toggle("show");
 }
 
 const openMenuBar = () => {
 	changeHamburgerIcon();
 	movetoLeft();
-	//setTimeout(activateOverlay,50);
+	activateOverlay();
+
 	menuBar.classList.toggle("open");
 
 	if (searchBox.classList.contains("showSearchBox")) {
@@ -74,11 +62,10 @@ function movetoLeft() {
 
 	hideScrollBar();
 }
-/* function activateOverlay()
-{
+function activateOverlay() {
 	const overlayCover = document.querySelector(".overlay-cover");
 	overlayCover.classList.toggle("active");
-} */
+}
 
 function hideScrollBar() {
 	body.classList.toggle("hideScrollBar");
@@ -90,14 +77,11 @@ const openAccordion = (e) => {
 	const accordionBodyActive = e.target.nextElementSibling;
 	let currentBar = document.querySelector(".rotate");
 	const bar = e.target.firstElementChild.firstElementChild;
-	
 
 	if (isAccordionHeader) {
 		if (currentActiveAccordionBody === null) {
-			
-			
-		   currentBar = bar;
-		   currentBar.classList.add("rotate");
+			currentBar = bar;
+			currentBar.classList.add("rotate");
 			currentActiveAccordionBody = accordionBodyActive;
 			currentActiveAccordionBody.classList.add("activeAccordion");
 
@@ -105,32 +89,43 @@ const openAccordion = (e) => {
 		}
 
 		if (currentActiveAccordionBody === accordionBodyActive) {
-			
-			
 			currentBar.classList.toggle("rotate");
 			currentActiveAccordionBody.classList.remove("activeAccordion");
 			return;
 		}
 
-		
-	   currentBar.classList.remove("rotate");
-	   bar.classList.add("rotate");
+		currentBar.classList.remove("rotate");
+		bar.classList.add("rotate");
 		currentActiveAccordionBody.classList.remove("activeAccordion");
 		accordionBodyActive.classList.add("activeAccordion");
-		
 	}
 };
 
-function setMenuBar()
-{
+function setMenuBar() {
 	const bar = document.querySelector("#default-bar");
 	bar.classList.add("rotate");
 }
 
-// EVENTS
+const playVideo = (e) => {
+	const video = mobilityVideo.querySelector(".video-container video");
+	const videoContainer = mobilityVideo.querySelector(".video-container");
+	mobilityVideo.style.background = "none";
+	videoContainer.style.display = "block";
+	video.play();
+};
 
-//mobiiltyContainer.addEventListener("mouseover", playVideo);
-window.addEventListener("load",setMenuBar);
+const pauseVideo = (e) => {
+	const video = mobilityVideo.querySelector(".video-container video");
+	const videoContainer = mobilityVideo.querySelector(".video-container");
+	video.pause();
+	//mobilityVideo.style.background = "url("../ images / mobility.jpg")";
+	videoContainer.style.display = "none";
+};
+
+// EVENTS
+window.addEventListener("load", setMenuBar);
 searchIcon.addEventListener("click", showSearchBox);
 hamburgerIcon.addEventListener("click", openMenuBar);
 menuBar.addEventListener("click", openAccordion);
+mobilityVideo.addEventListener("mouseover", playVideo);
+mobilityVideo.addEventListener("mouseout", pauseVideo);
