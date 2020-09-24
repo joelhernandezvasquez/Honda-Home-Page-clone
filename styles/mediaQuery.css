@@ -1,0 +1,10 @@
+@media (max-width: 1100px) {
+  .airbag-alert span {
+    display: none;
+  }
+  .airbag-alert .airbag-warning-container {
+    width: 5%;
+    background: red;
+  }
+}
+/*# sourceMappingURL=mediaQuery.css.map */

@@ -49,6 +49,16 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1100px) {
+  .airbag-alert span {
+    display: none;
+  }
+  .airbag-alert .airbag-warning-container {
+    width: 5%;
+    background: red;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1090,6 +1100,10 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
   padding-top: 0.5rem;
 }
 
+.videos-gallery .inner-videos-gallery .mobility.remove-background {
+  background: none;
+}
+
 .videos-gallery .inner-videos-gallery .enviroment {
   position: relative;
   background: url("../images/enviroment.jpg");
@@ -1101,6 +1115,10 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
 .videos-gallery .inner-videos-gallery .enviroment .content a {
   color: #fefffb;
   padding-top: 0.5rem;
+}
+
+.videos-gallery .inner-videos-gallery .enviroment.remove-background {
+  background: none;
 }
 
 .videos-gallery .inner-videos-gallery .community {
@@ -1116,6 +1134,10 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
   padding-top: 0.5rem;
 }
 
+.videos-gallery .inner-videos-gallery .community.remove-background {
+  background: none;
+}
+
 .videos-gallery .inner-videos-gallery .safety {
   position: relative;
   background: url("../images/safety.jpg");
@@ -1127,6 +1149,10 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
 .videos-gallery .inner-videos-gallery .safety .content a {
   color: #fefffb;
   padding-top: 0.5rem;
+}
+
+.videos-gallery .inner-videos-gallery .safety.remove-background {
+  background: none;
 }
 
 .honda-history {
@@ -1671,5 +1697,56 @@ body.hideScrollBar {
   -webkit-transform: translateX(1px);
           transform: translateX(1px);
   z-index: 30;
+}
+
+@media (max-width: 1100px) {
+  .banner {
+    height: 60vh;
+  }
+  .banner .overlay h1 {
+    font-size: 1.8rem;
+  }
+  .banner .overlay p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .banner .overlay .btn-call_action {
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  .airbag-alert span {
+    display: none;
+  }
+  .airbag-alert .airbag-warning-container {
+    width: 6%;
+  }
+  .airbag-alert .airbag-info {
+    width: 94%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .airbag-alert .airbag-info p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 1rem 0 5rem;
+  }
+  .airbag-alert .airbag-info a,
+  .airbag-alert .airbag-info i {
+    color: #ff9600;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -3,8 +3,10 @@ const hamburgerIcon = document.querySelector(".hamburger-container");
 const menuBar = document.querySelector(".menu-bar");
 const body = document.querySelector("body");
 const searchBox = document.querySelector(".search-box");
-
 const mobilityVideo = document.querySelector(".mobility");
+const enviromentVideo = document.querySelector(".enviroment");
+const communityVideo = document.querySelector(".community");
+const safetyVideo = document.querySelector(".safety");
 
 // METHODS
 
@@ -106,20 +108,71 @@ function setMenuBar() {
 	bar.classList.add("rotate");
 }
 
-const playVideo = (e) => {
-	const video = mobilityVideo.querySelector(".video-container video");
-	const videoContainer = mobilityVideo.querySelector(".video-container");
-	mobilityVideo.style.background = "none";
+function playVideo(mainVideoContainer)
+{
+	const video = mainVideoContainer.querySelector(".video-container video");
+	const videoContainer = mainVideoContainer.querySelector(".video-container");
+	mainVideoContainer.classList.toggle("remove-background");
 	videoContainer.style.display = "block";
 	video.play();
+}
+
+function pauseVideo(mainVideoContainer)
+{
+	const video = mainVideoContainer.querySelector(".video-container video");
+	const videoContainer = mainVideoContainer.querySelector(".video-container");
+	video.pause();
+	mainVideoContainer.classList.toggle("remove-background");
+	videoContainer.style.display = "none";
+	
+}
+
+
+const playVideoMobilityHandler = (e) => {
+	
+	const mainVideoContainer = (e.target.parentElement);
+	playVideo(mainVideoContainer);
+
 };
 
-const pauseVideo = (e) => {
-	const video = mobilityVideo.querySelector(".video-container video");
-	const videoContainer = mobilityVideo.querySelector(".video-container");
-	video.pause();
-	//mobilityVideo.style.background = "url("../ images / mobility.jpg")";
-	videoContainer.style.display = "none";
+const pauseVideoMobilityHandler = (e) => {
+	const mainVideoContainer = (e.target.parentElement);
+	pauseVideo(mainVideoContainer);
+
+};
+const playEnviromentHandler = (e) => {
+	
+	const mainVideoContainer = (e.target.parentElement);
+	playVideo(mainVideoContainer);
+};
+
+const pauseEnviromentHandler = (e) => {
+	const mainVideoContainer = (e.target.parentElement);
+	pauseVideo(mainVideoContainer);
+};
+
+const playCommunityHandler = (e) => {
+	
+	const mainVideoContainer = (e.target.parentElement);
+	playVideo(mainVideoContainer);
+};
+
+const pauseCommunityMobilityHandler = (e) => {
+	const mainVideoContainer = (e.target.parentElement);
+	pauseVideo(mainVideoContainer);
+};
+
+const playSafetyMobilityHandler = (e) => {
+	
+	const mainVideoContainer = (e.target.parentElement);
+	playVideo(mainVideoContainer);
+
+};
+
+const pauseSafetyMobilityHandler = (e) => {
+	const mainVideoContainer = (e.target.parentElement);
+	pauseVideo(mainVideoContainer);
+
 };
 
 // EVENTS
@@ -127,5 +180,11 @@ window.addEventListener("load", setMenuBar);
 searchIcon.addEventListener("click", showSearchBox);
 hamburgerIcon.addEventListener("click", openMenuBar);
 menuBar.addEventListener("click", openAccordion);
-mobilityVideo.addEventListener("mouseover", playVideo);
-mobilityVideo.addEventListener("mouseout", pauseVideo);
+mobilityVideo.addEventListener("mouseover", playVideoMobilityHandler);
+mobilityVideo.addEventListener("mouseout", pauseVideoMobilityHandler);
+enviromentVideo.addEventListener("mouseover", playEnviromentHandler);
+enviromentVideo.addEventListener("mouseout", pauseEnviromentHandler);
+communityVideo.addEventListener("mouseover", playCommunityHandler);
+communityVideo.addEventListener("mouseout", pauseCommunityMobilityHandler);
+safetyVideo.addEventListener("mouseover", playSafetyMobilityHandler);
+safetyVideo.addEventListener("mouseout", pauseSafetyMobilityHandler);
