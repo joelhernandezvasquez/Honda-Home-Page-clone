@@ -65,6 +65,10 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
@@ -728,7 +732,6 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  overflow: hidden;
 }
 
 .gallery .inner-gallery div:first-child {
@@ -2092,6 +2095,9 @@ body.hideScrollBar {
 }
 
 @media (max-width: 500px) {
+  .video-container {
+    overflow: visible;
+  }
   header .main-nav .menu {
     height: 60px;
     display: -webkit-box;
@@ -2133,15 +2139,21 @@ body.hideScrollBar {
   .banner .overlay a {
     margin-bottom: 0;
   }
-  .airbag-alert .airbag-warning-container {
-    width: 12%;
+  .airbag-alert .airbag-warning-container .icon-container {
+    z-index: 3;
   }
   .airbag-alert .airbag-info {
-    width: 88%;
-    padding-left: 1rem;
+    padding: 2rem 1rem;
   }
-  .airbag-alert .airbag-info p, .airbag-alert .airbag-info a {
-    font-size: 1rem;
+  .airbag-alert .airbag-info p,
+  .airbag-alert .airbag-info a {
+    margin-left: 30px;
+  }
+  .airbag-alert .airbag-info p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 2px;
   }
 }
 /*# sourceMappingURL=main.css.map */
