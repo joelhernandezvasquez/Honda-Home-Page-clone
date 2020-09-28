@@ -1,5 +1,5 @@
 .container {
-  max-width: 90%;
+  max-width: 95%;
   margin: auto;
   padding: 1rem;
   margin-top: 2.5rem;
@@ -45,7 +45,6 @@
 }
 
 .main-footer .container .copyright-container, .main-footer .container .cookies-info, .main-footer .container .outter-footer-links {
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -1579,20 +1578,21 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
 }
 
 .main-footer .container .policy-container {
-  width: 55%;
   margin: 1rem auto;
 }
 
 .main-footer .container .policy-container ul {
+  width: 100%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-footer .container .policy-container ul a {
@@ -1608,7 +1608,7 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
 .main-footer .container .policy-container ul li::after {
   content: "|";
   color: #969896;
-  margin-left: 5px;
+  margin-right: 10px;
 }
 
 .main-footer .container .policy-container ul li:last-child::after {
@@ -1700,6 +1700,12 @@ body.hideScrollBar {
 }
 
 @media (max-width: 1100px) {
+  .honda-gallery-box {
+    padding: 5rem 1rem;
+  }
+  .honda-gallery-box * {
+    margin: 0.2rem 0;
+  }
   .banner {
     height: 60vh;
   }
@@ -1723,9 +1729,6 @@ body.hideScrollBar {
   }
   .airbag-alert .airbag-info {
     width: 94%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1736,17 +1739,409 @@ body.hideScrollBar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-left: 4rem;
   }
   .airbag-alert .airbag-info p {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0 1rem 0 5rem;
+    font-size: 1.1rem;
+    margin: 0 1rem 0.5rem 0rem;
   }
   .airbag-alert .airbag-info a,
   .airbag-alert .airbag-info i {
-    color: #ff9600;
     font-size: 1rem;
-    font-weight: bold;
+  }
+  .gallery .inner-gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery .inner-gallery div:nth-child(4) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .gallery .inner-gallery div:nth-child(6) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .gallery .inner-gallery div:nth-child(7) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .gallery .inner-gallery div:nth-child(9) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .gallery .inner-gallery div:nth-child(10) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .gallery .inner-gallery div:nth-child(11) {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .gallery .inner-gallery div:nth-child(12) {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .gallery .inner-gallery div:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .gallery .inner-gallery div:nth-child(14) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .gallery .inner-gallery div:nth-child(15) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .gallery .inner-gallery div:nth-child(16) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .gallery .inner-gallery div:nth-child(1) p,
+  .gallery .inner-gallery div:nth-child(3) p,
+  .gallery .inner-gallery div:nth-child(5) p,
+  .gallery .inner-gallery div:nth-child(7) p,
+  .gallery .inner-gallery div:nth-child(9) p,
+  .gallery .inner-gallery div:nth-child(12) p,
+  .gallery .inner-gallery div:nth-child(15) p,
+  .gallery .inner-gallery div:nth-child(16) p {
+    display: none;
+  }
+  .gallery .inner-gallery div:nth-child(3) .small-triangle {
+    left: 45%;
+    bottom: -16px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .gallery .inner-gallery div:nth-child(9) .small-triangle {
+    left: -20px;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  .gallery .inner-gallery div:nth-child(16) .small-triangle {
+    top: 45%;
+    left: 97%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .videos-gallery .inner-videos-gallery-text {
+    font-size: 1rem;
+  }
+  .videos-gallery .inner-videos-gallery-body-text {
+    bottom: 4rem;
+  }
+  .honda-history {
+    height: 70vh;
+  }
+  .honda-features .container .inner-honda-features {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (500px)[3];
+        grid-template-rows: repeat(3, 500px);
+  }
+  .honda-features .container .inner-honda-features div:nth-child(3) {
+    background: #fefffb;
+  }
+  .honda-features .container .inner-honda-features .hispanic-feature-box .body-feature-box {
+    background: #eeeeee;
+  }
+}
+
+@media (max-width: 769px) {
+  .banner {
+    height: 50vh;
+  }
+  .banner .overlay p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .airbag-alert .airbag-warning-container {
+    width: 12%;
+  }
+  .airbag-alert .airbag-info {
+    width: 88%;
+  }
+  .gallery .inner-gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery .inner-gallery div:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .gallery .inner-gallery div:nth-child(2) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .gallery .inner-gallery div:nth-child(3) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .gallery .inner-gallery div:nth-child(3) .small-triangle {
+    left: -22px;
+    bottom: 0;
+    top: 45%;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  .gallery .inner-gallery div:nth-child(4) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .gallery .inner-gallery div:nth-child(5) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .gallery .inner-gallery div:nth-child(6) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .gallery .inner-gallery div:nth-child(7) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    position: relative;
+  }
+  .gallery .inner-gallery div:nth-child(8) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .gallery .inner-gallery div:nth-child(9) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+  }
+  .gallery .inner-gallery div:nth-child(10) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+  }
+  .gallery .inner-gallery div:nth-child(11) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+  }
+  .gallery .inner-gallery div:nth-child(12) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .gallery .inner-gallery div:nth-child(13) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .gallery .inner-gallery div:nth-child(14) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
+  .gallery .inner-gallery div:nth-child(15) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
+  .gallery .inner-gallery div:nth-child(16) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+  }
+  .videos-gallery .inner-videos-gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (350px)[4];
+        grid-template-rows: repeat(4, 350px);
+  }
+  .videos-gallery .inner-videos-gallery .content {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .videos-gallery .inner-videos-gallery .content .inner-videos-gallery-title {
+    margin-bottom: 3.5rem;
+    font-size: 1.4rem;
+  }
+  .videos-gallery .inner-videos-gallery .content .inner-videos-gallery-body-text {
+    bottom: 1rem;
+  }
+  .videos-gallery .inner-videos-gallery .content .inner-videos-gallery-body-text .inner-videos-gallery-text {
+    font-size: 0.9rem;
+  }
+  .honda-history {
+    height: 350px;
+  }
+  .honda-history .inner-honda-history {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .honda-history .inner-honda-history h1 {
+    color: #fefffb;
+    font-size: 1.4rem;
+  }
+  .honda-history .inner-honda-history p {
+    font-size: 1rem;
+    color: #fefffb;
+  }
+  .honda-history .inner-honda-history a {
+    color: #fefffb;
+  }
+  .honda-features .container .inner-honda-features {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (500px)[4] 350px 500px;
+        grid-template-rows: repeat(4, 500px) 350px 500px;
+  }
+  .honda-features .container .inner-honda-features .honda-feature-card .honda-feature-card-body p {
+    padding: 5px;
+  }
+  .honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card p {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  header .main-nav .menu {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  header .main-nav .menu span {
+    display: none;
+  }
+  header .main-nav .menu #about-us {
+    display: none;
+  }
+  header .main-nav .menu div:nth-child(3) {
+    width: auto;
+  }
+  .banner {
+    height: 500px;
+  }
+  .banner .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner .overlay h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .banner .overlay p {
+    font-size: 0.9rem;
+  }
+  .banner .overlay a {
+    margin-bottom: 0;
+  }
+  .airbag-alert .airbag-warning-container {
+    width: 12%;
+  }
+  .airbag-alert .airbag-info {
+    width: 88%;
+    padding-left: 1rem;
+  }
+  .airbag-alert .airbag-info p, .airbag-alert .airbag-info a {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
