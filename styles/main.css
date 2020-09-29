@@ -1596,6 +1596,8 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main-footer .container .policy-container ul a {
@@ -1652,6 +1654,8 @@ header .main-nav .menu div:nth-child(3) li:nth-child(2) .close-icon-search.show 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main-footer .container .outter-footer-links ul a {
@@ -2315,9 +2319,13 @@ body.hideScrollBar {
   }
   .main-footer .container .social-media-container {
     background: red;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
-    margin: 3rem auto 1rem auto;
-    padding: 1rem 0;
+  }
+  .main-footer .container .plus-icon-container {
+    width: 25px;
+    height: 25px;
   }
 }
 /*# sourceMappingURL=main.css.map */

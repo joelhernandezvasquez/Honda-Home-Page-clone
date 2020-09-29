@@ -1163,6 +1163,7 @@ header {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				flex-wrap: wrap;
 
 				a {
 					font-size: 0.8rem;
@@ -1210,6 +1211,7 @@ header {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				flex-wrap: wrap;
 
 				a {
 					color: $link-color;
@@ -1815,10 +1817,12 @@ body.hideScrollBar {
 		.container {
 			.social-media-container {
 				background: red;
-
+				flex-wrap: wrap;
 				width: 100%;
-				margin: 3rem auto 1rem auto;
-				padding: 1rem 0;
+			}
+			.plus-icon-container {
+				width: 25px;
+				height: 25px;
 			}
 		}
 	}
