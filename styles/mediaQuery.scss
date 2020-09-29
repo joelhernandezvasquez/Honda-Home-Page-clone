@@ -1,21 +1,9 @@
 
 @import "variables";
 
-@media(max-width:1100px)
+@media(max-width:1000px)
 {
-    .airbag-alert{
-        
-        span{
-            display:none;
-        }
-        .airbag-warning-container{
-            width: 5%;
-            background:red;
-        }
+    .main-footer{
+        background:red;
     }
-
-   
-
-
-
 }

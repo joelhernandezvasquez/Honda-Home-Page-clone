@@ -8,9 +8,7 @@
 	padding: 0;
 }
 
-html {
-	width: 100%;
-}
+
 
 body {
 	font-family: $main-font;
@@ -246,6 +244,8 @@ header {
 	background-size: cover;
 	position: relative;
 	transition: transform 0.5s ease-out;
+	width:100%;
+	
 
 	.search-box {
 		position: fixed;
@@ -286,7 +286,10 @@ header {
 			font-weight: 600;
 			letter-spacing: 1px;
 			text-transform: uppercase;
-			margin-left: 20px;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+
 		}
 		button:hover {
 			color: $medium-grey;
@@ -1259,6 +1262,49 @@ body.hideScrollBar {
 	z-index: 30;
 }
 
+@media(max-width:1000px)
+{
+    .main-footer{
+       .container{
+		   .inner-footer-links{
+			grid-template-columns: repeat(2, 1fr);
+
+			& div:nth-child(1) {
+				grid-column: 1/2;
+				grid-row: 1/3;
+				
+			}
+			& div:nth-child(2) {
+				grid-column: 2/3;
+				grid-row: 1/2;
+				
+			}
+			& div:nth-child(3) {
+				grid-column: 1/2;
+				grid-row: 3/4;
+				
+			}
+			& div:nth-child(4) {
+				grid-column: 2/3;
+				grid-row: 2/3;
+				
+			}
+			& div:nth-child(5) {
+				grid-column: 1/2;
+				grid-row: 4/5;
+				
+			}
+
+			& div:nth-child(6) {
+				grid-column: 1/2;
+				grid-row: 5/6;
+				background:red;
+			}
+		   }
+	   }
+    }
+}
+
 @media (max-width: 1100px) {
 	.honda-gallery-box {
 		padding: 5rem 1rem;
@@ -1269,6 +1315,16 @@ body.hideScrollBar {
 
 	.banner {
 		height: 60vh;
+
+		.search-box
+		{
+			input {
+				width: 80%;
+			}
+			button{
+				font-size: 0.8rem;
+			}
+		}
 		.overlay {
 			h1 {
 				font-size: $xl-font;
@@ -1601,6 +1657,13 @@ body.hideScrollBar {
 }
 
 @media (max-width: 500px) {
+	
+	.honda-gallery-box{
+		img{
+			width: 120px;
+		}
+	}
+	
 	.video-container {
 		overflow: visible;
 	}
@@ -1613,6 +1676,7 @@ body.hideScrollBar {
 				align-items: center;
 				justify-content: space-between;
 				padding: 0.5rem 1rem;
+				
 
 				span {
 					display: none;
@@ -1647,9 +1711,17 @@ body.hideScrollBar {
 	}
 
 	.airbag-alert {
+		height:100px;
 		.airbag-warning-container {
+			height: 100%;
 			.icon-container {
 				z-index: 3;
+			}
+			.triangle {
+				
+				border-right: 80px solid transparent;
+				border-bottom: 100px solid $airbag-section-bg;
+				
 			}
 		}
 		.airbag-info {
@@ -1666,8 +1738,52 @@ body.hideScrollBar {
 				margin-top: 5px;
 				margin-bottom: 2px;
 			}
+			a{
+				font-size: $sm-font;
+			}
 		}
 	}
-	.videos-gallery {
+	.gallery {
+		.inner-gallery{
+			grid-template-rows: repeat(8,180px);
+		}
 	}
+	.videos-gallery{
+		.inner-videos-gallery{
+			.content {
+				.inner-videos-gallery-title {
+					margin-bottom: 4.5rem;
+		
+				}
+				.inner-videos-gallery-body-text {
+					bottom: 1.8rem;
+					.inner-videos-gallery-text {
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+	.honda-features {
+		.container {
+			.inner-honda-features {
+				grid-template-rows: repeat(4, 400px) 350px 400px;
+
+				.honda-feature-card {
+					.honda-feature-card-body {
+						p {
+							padding: 5px;
+						}
+					}
+				}
+
+				& div:nth-child(2).honda-feature-card {
+					p {
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+	
 }

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAGA,MAAM,EAAC,SAAS,EAAE,MAAM;EAEpB,AAEI,aAFS,CAET,IAAI,CAAA;IACA,OAAO,EAAC,IAAI;GACf;EAJL,AAKI,aALS,CAKT,yBAAyB,CAAA;IACrB,KAAK,EAAE,EAAE;IACT,UAAU,EAAC,GAAG;GACjB",
+    "mappings": "AAGA,MAAM,EAAC,SAAS,EAAE,MAAM;EAEpB,AAAA,YAAY,CAAA;IACR,UAAU,EAAC,GAAG;GACjB",
     "sources": [
         "mediaQuery.scss",
         "variables.scss"
