@@ -1706,14 +1706,13 @@ body.hideScrollBar {
   .main-footer .container .inner-footer-links {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    position: relative;
   }
   .main-footer .container .inner-footer-links div:nth-child(1) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1/3;
+    grid-auto-rows: 1/3;
   }
   .main-footer .container .inner-footer-links div:nth-child(2) {
     -ms-grid-column: 2;
@@ -1730,6 +1729,8 @@ body.hideScrollBar {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
+    position: absolute;
+    top: -150px;
   }
   .main-footer .container .inner-footer-links div:nth-child(4) {
     -ms-grid-column: 2;
@@ -1754,7 +1755,6 @@ body.hideScrollBar {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5/6;
-    background: red;
   }
 }
 
@@ -2154,6 +2154,63 @@ body.hideScrollBar {
   .honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card p {
     padding: 5px;
   }
+  .main-footer .container .inner-footer-links {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main-footer .container .inner-footer-links div {
+    margin-bottom: 10px;
+  }
+  .main-footer .container .inner-footer-links div:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .main-footer .container .inner-footer-links div:nth-child(2) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .main-footer .container .inner-footer-links div:nth-child(3) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    position: relative;
+    top: 0px;
+  }
+  .main-footer .container .inner-footer-links div:nth-child(4) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .main-footer .container .inner-footer-links div:nth-child(5) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .main-footer .container .inner-footer-links div:nth-child(6) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
 }
 
 @media (max-width: 500px) {
@@ -2255,6 +2312,12 @@ body.hideScrollBar {
   }
   .honda-features .container .inner-honda-features div:nth-child(2).honda-feature-card p {
     padding: 5px;
+  }
+  .main-footer .container .social-media-container {
+    background: red;
+    width: 100%;
+    margin: 3rem auto 1rem auto;
+    padding: 1rem 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
