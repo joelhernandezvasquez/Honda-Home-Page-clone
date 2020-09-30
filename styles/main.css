@@ -2318,14 +2318,19 @@ body.hideScrollBar {
     padding: 5px;
   }
   .main-footer .container .social-media-container {
-    background: red;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     width: 100%;
   }
   .main-footer .container .plus-icon-container {
     width: 25px;
     height: 25px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 374px) {
+  .main-footer .container .social-media-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=main.css.map */

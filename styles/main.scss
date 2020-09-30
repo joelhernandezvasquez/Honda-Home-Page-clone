@@ -1816,13 +1816,22 @@ body.hideScrollBar {
 	.main-footer {
 		.container {
 			.social-media-container {
-				background: red;
-				flex-wrap: wrap;
 				width: 100%;
 			}
 			.plus-icon-container {
 				width: 25px;
 				height: 25px;
+				margin-left: 0px;
+			}
+		}
+	}
+}
+
+@media (max-width: 374px) {
+	.main-footer {
+		.container {
+			.social-media-container {
+				flex-wrap: wrap;
 			}
 		}
 	}

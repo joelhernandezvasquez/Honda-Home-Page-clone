@@ -7,6 +7,7 @@ const mobilityVideo = document.querySelector(".mobility");
 const enviromentVideo = document.querySelector(".enviroment");
 const communityVideo = document.querySelector(".community");
 const safetyVideo = document.querySelector(".safety");
+let screenSize = null;
 
 // METHODS
 
@@ -33,7 +34,10 @@ function changeSearchIcon() {
 
 const openMenuBar = () => {
 	changeHamburgerIcon();
-	movetoLeft();
+
+	if (getWindowSize() > 500) {
+		movetoLeft();
+	}
 	activateOverlay();
 
 	menuBar.classList.toggle("open");
@@ -108,8 +112,7 @@ function setMenuBar() {
 	bar.classList.add("rotate");
 }
 
-function playVideo(mainVideoContainer)
-{
+function playVideo(mainVideoContainer) {
 	const video = mainVideoContainer.querySelector(".video-container video");
 	const videoContainer = mainVideoContainer.querySelector(".video-container");
 	mainVideoContainer.classList.toggle("remove-background");
@@ -117,66 +120,64 @@ function playVideo(mainVideoContainer)
 	video.play();
 }
 
-function pauseVideo(mainVideoContainer)
-{
+function pauseVideo(mainVideoContainer) {
 	const video = mainVideoContainer.querySelector(".video-container video");
 	const videoContainer = mainVideoContainer.querySelector(".video-container");
 	video.pause();
 	mainVideoContainer.classList.toggle("remove-background");
 	videoContainer.style.display = "none";
-	
 }
 
-
 const playVideoMobilityHandler = (e) => {
-	
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	playVideo(mainVideoContainer);
-
 };
 
 const pauseVideoMobilityHandler = (e) => {
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	pauseVideo(mainVideoContainer);
-
 };
 const playEnviromentHandler = (e) => {
-	
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	playVideo(mainVideoContainer);
 };
 
 const pauseEnviromentHandler = (e) => {
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	pauseVideo(mainVideoContainer);
 };
 
 const playCommunityHandler = (e) => {
-	
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	playVideo(mainVideoContainer);
 };
 
 const pauseCommunityMobilityHandler = (e) => {
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	pauseVideo(mainVideoContainer);
 };
 
 const playSafetyMobilityHandler = (e) => {
-	
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	playVideo(mainVideoContainer);
-
 };
 
 const pauseSafetyMobilityHandler = (e) => {
-	const mainVideoContainer = (e.target.parentElement);
+	const mainVideoContainer = e.target.parentElement;
 	pauseVideo(mainVideoContainer);
-
 };
+
+function setWindowSize() {
+	screenSize = window.innerWidth;
+}
+
+function getWindowSize() {
+	return screenSize;
+}
 
 // EVENTS
 window.addEventListener("load", setMenuBar);
+window.addEventListener("resize", setWindowSize);
 searchIcon.addEventListener("click", showSearchBox);
 hamburgerIcon.addEventListener("click", openMenuBar);
 menuBar.addEventListener("click", openAccordion);
